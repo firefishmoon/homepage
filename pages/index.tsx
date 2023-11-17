@@ -29,7 +29,7 @@ const Home = () => (
                 </SimpleGrid>
             </Box>
             <Flex>
-                <iframe frameBorder="no" border={0} marginWidth={0} marginHeight={0} width={330} height={110}
+                <iframe frameBorder="no" marginWidth={0} marginHeight={0} width={330} height={110}
                     src="//music.163.com/outchain/player?type=0&id=8690599436&auto=1&height=90"></iframe>
             </Flex>
         </SimpleGrid>

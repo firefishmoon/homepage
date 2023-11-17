@@ -14,7 +14,7 @@ const pageSize = 10
 
 const Posts = ({ allPostsData }) => {
     const [page, setPage] = React.useState(0)
-    const handlePageClick = (p: number) => setPage(p)
+    const handlePageClick = (page: number) => setPage(page)
     let endIdx = (page + 1) * pageSize
     if (endIdx >= allPostsData.length)
         endIdx = allPostsData.length
@@ -46,9 +46,10 @@ const Posts = ({ allPostsData }) => {
                         count={allPostsData.length}
                         pageSize={pageSize}
                         onPageChange={handlePageClick}
-                        textColor={textColor}
                         margin={2}
                         colorScheme='red'
+                        fontWeight="light"
+                        borderRadius="md"
                     />
                 </Center>
                 <Footer />

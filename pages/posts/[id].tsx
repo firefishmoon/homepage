@@ -1,7 +1,7 @@
 import Layout from "../../components/layout/article"
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Navbar from "../../components/navbar"
-import { Container, Box, Text, Divider } from "@chakra-ui/react"
+import { Container, Text, Divider } from "@chakra-ui/react"
 import Footer from "../../components/footer"
 import ChakraUIRenderer from "chakra-ui-markdown-renderer"
 import ReactMarkdown from "react-markdown"
@@ -15,8 +15,9 @@ export default function Post({ postData }) {
                 <br />
                 <Divider></Divider>
                 <br />
-                <ReactMarkdown components={ChakraUIRenderer()}
-                    children={postData.markdown}></ReactMarkdown>
+                <ReactMarkdown components={ChakraUIRenderer()}>
+                    {postData.markdown}
+                </ReactMarkdown>
                 <br />
                 {postData.date}
                 <br />

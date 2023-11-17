@@ -2,7 +2,7 @@ import * as React from "react";
 import { Button, HStack, IconButton, Stack } from "@chakra-ui/react";
 
 import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
-import { PaginateProps } from "./types/paginate";
+import { PaginateProps } from "./types/paginate.d";
 
 export const Paginate = (props: PaginateProps) => {
     const {

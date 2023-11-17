@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html'
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -18,7 +16,7 @@ export function getSortedPostsData() {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
 
         // Use gray-matter to parse the post metadata section
-        const matterResult = matter(fileContents);
+        const matterResult: any = matter(fileContents);
 
         // Combine the data with the id
         return {
