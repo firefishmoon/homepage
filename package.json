@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "next dev",
         "prettier": "prettier --write .",
-        "lint": "next lint"
+        "lint": "next lint",
+        "install": "install --force",
     },
     "author": "jie.he",
     "license": "MIT",
