@@ -8,7 +8,7 @@
         "prettier": "prettier --write .",
         "lint": "next lint",
         "install": "install --force",
-        "build": "build --force",
+        "build": "build --force"
     },
     "author": "jie.he",
     "license": "MIT",
