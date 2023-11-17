@@ -1,0 +1,36 @@
+{
+    "name": "homepage",
+    "version": "1.0.0",
+    "description": "my homepage",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "prettier": "prettier --write .",
+        "lint": "next lint"
+    },
+    "author": "jie.he",
+    "license": "MIT",
+    "dependencies": {
+        "@chakra-ui/icons": "^2.1.1",
+        "@chakra-ui/next-js": "^2.1.5",
+        "@chakra-ui/react": "^2.8.2",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "chakra-ui-markdown-renderer": "^4.1.0",
+        "eslint": "^8.52.0",
+        "eslint-config-next": "^14.0.1",
+        "framer-motion": "^10.16.5",
+        "gray-matter": "^4.0.3",
+        "next": "^14.0.3",
+        "prettier": "^3.0.3",
+        "react-icons": "^4.12.0",
+        "react-markdown": "^9.0.1",
+        "react-paginate-chakra-ui": "^0.1.2",
+        "remark": "^15.0.1",
+        "remark-html": "^16.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "20.9.0",
+        "@types/react": "18.2.37"
+    }
+}
