@@ -3,8 +3,8 @@ import Layout from "../components/layout/article"
 import Navbar from "../components/navbar"
 import Section from "../components/section"
 import Footer from "../components/footer"
-import { chakra, Center, Container, Heading, Image, SimpleGrid } from "@chakra-ui/react"
-import { Paginate } from "react-paginate-chakra-ui"
+import { Center, Container, Heading, Image, SimpleGrid } from "@chakra-ui/react"
+import { Paginate } from "../components/paginator"
 import * as React from "react"
 import { getSortedPostsData } from "../lib/posts"
 
@@ -32,6 +32,7 @@ const Posts = ({ allPostsData }) => {
                     <SimpleGrid columns={[1, 1, 1]} gap={6} m={4}>
                         {displayedPostsData.map(({ id, date, title }) => (
                             <GridItem
+                                key={id}
                                 title={title}
                                 date={date}
                                 href={`/posts/${id}`}
