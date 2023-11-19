@@ -36,14 +36,5 @@ const Home = () => (
     </Layout >
 )
 
-// export async function getStaticProps() {
-//     const res = await fetch("http://www.baidu.com")
-//     const result = await res.text()
-//     return {
-//         props: {
-//             text: result
-//         }
-//     }
-// }
 
 export default Home
