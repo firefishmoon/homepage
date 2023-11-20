@@ -6,6 +6,8 @@ import Footer from "../../components/footer"
 import ChakraUIRenderer from "chakra-ui-markdown-renderer"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const markdownTheme = {
     p: props => {
@@ -47,6 +49,20 @@ const markdownTheme = {
                 {children}
             </ListItem>
         )
+    },
+    code: props => {
+        const { className, children } = props
+        const match = /language-(\w+)/.exec(className || '')
+        return (
+            <SyntaxHighlighter
+                showLineNumbers={true}
+                style={darcula}
+                language={match[1]}
+            >
+                {String(children).replace(/\n$/, '')}
+            </SyntaxHighlighter>
+        )
+
     }
 }
 
