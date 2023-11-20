@@ -1,7 +1,7 @@
 import Layout from "../../components/layout/article"
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Navbar from "../../components/navbar"
-import { Container, Text, Divider, Link } from "@chakra-ui/react"
+import { Container, Text, Divider, Link, OrderedList, UnorderedList, ListItem } from "@chakra-ui/react"
 import Footer from "../../components/footer"
 import ChakraUIRenderer from "chakra-ui-markdown-renderer"
 import ReactMarkdown from "react-markdown"
@@ -22,6 +22,30 @@ const markdownTheme = {
             <Link textColor='blue.300'>
                 {children}
             </Link>
+        )
+    },
+    ol: props => {
+        const { children } = props
+        return (
+            <OrderedList>
+                {children}
+            </OrderedList>
+        )
+    },
+    ul: props => {
+        const { children } = props
+        return (
+            <UnorderedList>
+                {children}
+            </UnorderedList>
+        )
+    },
+    li: props => {
+        const { children } = props
+        return (
+            <ListItem>
+                {children}
+            </ListItem>
         )
     }
 }
