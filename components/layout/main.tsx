@@ -8,9 +8,9 @@ const variants = {
     exit: { opacity: 0, x: -0, y: 20 }
 }
 
-const Layout = ({ children }) => (
+const Layout = ({ children, imgUrl }) => (
     <Box as="main" display="flex" justifyContent="center" alignItems="center"
-        height="100vh" bgImg="url('https://www.todaybing.com/api/today')" bgRepeat='round'>
+        height="100vh" bgImg={imgUrl} bgRepeat='round'>
         <motion.article
             initial="hidden"
             animate="enter"
@@ -27,5 +27,6 @@ const Layout = ({ children }) => (
         </Head>
     </Box>
 )
+
 
 export default Layout

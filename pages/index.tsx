@@ -1,8 +1,8 @@
 import { Box, Image, Center, Divider, SimpleGrid, Link, Flex } from '@chakra-ui/react'
 import Layout from '../components/layout/main'
 
-const Home = () => (
-    <Layout>
+const Home = ({imgUrl}) => (
+    <Layout imgUrl={imgUrl}>
         <SimpleGrid columns={1}>
             <Box borderRadius='30' height={300} p={10}
                 bgGradient="linear(to-r, #3a548fc7, #182848b2)"
@@ -36,5 +36,16 @@ const Home = () => (
     </Layout >
 )
 
+export async function getServerSideProps() {
+    const res = await fetch(`https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN`)
+    const data = await res.json()
+    const imgUrl = "https://cn.bing.com" + data["images"][0]["url"]
+    // console.log(imgUrl)
+    return {
+        props: {
+            imgUrl: imgUrl
+        }
+    }
+}
 
 export default Home
