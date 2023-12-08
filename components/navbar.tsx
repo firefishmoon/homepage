@@ -98,6 +98,7 @@ const Navbar = props => {
                                 icon={<HamburgerIcon />}
                                 variant="outline"
                                 aria-label="Options"
+                                color='white'
                             />
                             <MenuList>
                                 <MenuItem as={MenuLink} href="/">
