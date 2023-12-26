@@ -1,7 +1,7 @@
 import { Box, Image, Center, Divider, SimpleGrid, Link, Flex } from '@chakra-ui/react'
 import Layout from '../components/layout/main'
 
-const Home = ({imgUrl}) => (
+const Home = ({ imgUrl }) => (
     <Layout imgUrl={imgUrl}>
         <SimpleGrid columns={1}>
             <Box borderRadius='30' height={300} p={10}
@@ -25,7 +25,7 @@ const Home = ({imgUrl}) => (
                 <SimpleGrid columns={3} spacing={1} mt={5}>
                     <Center textColor='white'><Link href='/posts'>Posts</Link></Center>
                     <Center><Divider orientation='vertical'></Divider></Center>
-                    <Center textColor='white'><Link>About</Link></Center>
+                    <Center textColor='white'><Link href='/about'>About</Link></Center>
                 </SimpleGrid>
             </Box>
             <Flex>

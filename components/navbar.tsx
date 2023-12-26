@@ -101,7 +101,7 @@ const Navbar = props => {
                                 color='white'
                             />
                             <MenuList>
-                                <MenuItem as={MenuLink} href="/">
+                                <MenuItem as={MenuLink} href="/about">
                                     About
                                 </MenuItem>
                                 <MenuItem as={MenuLink} href="/posts">
