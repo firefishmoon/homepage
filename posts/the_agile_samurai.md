@@ -412,7 +412,7 @@ INVEST （Independent，Negotiable，Valuable，Estimatable，Small and Testable
 
 完成任务的关键就是 *敏捷迭代*——1~2周的冲刺，在此期间，我们将用户故事转化为可工作的、生产就绪的软件。
 
-                                                迭代次数=全部工作量/估算的团队速率
+迭代次数=全部工作量/估算的团队速率
 
 例如：
 
