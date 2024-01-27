@@ -1,7 +1,7 @@
 import Layout from "../../components/layout/article"
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Navbar from "../../components/navbar"
-import { Container, Text, Divider, Link, OrderedList, UnorderedList, ListItem } from "@chakra-ui/react"
+import { Container, Text, Divider, Link, OrderedList, UnorderedList, ListItem, Heading } from "@chakra-ui/react"
 import Footer from "../../components/footer"
 import ChakraUIRenderer from "chakra-ui-markdown-renderer"
 import ReactMarkdown from "react-markdown"
@@ -37,7 +37,7 @@ const markdownTheme = {
     ul: props => {
         const { children } = props
         return (
-            <UnorderedList>
+            <UnorderedList mb='3'>
                 {children}
             </UnorderedList>
         )
@@ -63,14 +63,38 @@ const markdownTheme = {
             </SyntaxHighlighter>
         )
 
-    }
+    },
+    h1: props => {
+        const { children } = props
+        return (
+            <Heading fontSize='4xl' as='h1' mb='3'>
+                {children}
+            </Heading>
+        )
+    },
+    h2: props => {
+        const { children } = props
+        return (
+            <Heading fontSize='3xl' as='h2' mb='3'>
+                {children}
+            </Heading>
+        )
+    },
+    h3: props => {
+        const { children } = props
+        return (
+            <Heading fontSize='2xl' as='h3' mb='3'>
+                {children}
+            </Heading>
+        )
+    },
 }
 
 export default function Post({ postData }) {
     return (
         <Layout title={`${postData.title} - Jay`}>
             <Navbar></Navbar>
-            <Container bgColor='gray.900' p={4}>
+            <Container bgColor='gray.900' p={4} maxW="680">
                 <Text mt={10} fontSize='4xl' fontWeight='bold' textAlign='center'>{postData.title}</Text>
                 <br />
                 <Divider></Divider>

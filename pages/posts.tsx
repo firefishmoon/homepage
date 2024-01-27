@@ -22,7 +22,7 @@ const Posts = ({ allPostsData }) => {
     return (
         <Layout title='Posts' >
             <Navbar></Navbar>
-            <Container bgColor='gray.900' p={0}>
+            <Container bgColor='gray.900' p={0} maxW='680'>
                 <Image fit="cover" src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg"
                     w="100%" h='300'></Image>
                 <Heading as="h3" fontSize={20} m={4} textColor={textColor} >
