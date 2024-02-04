@@ -1,39 +1,50 @@
 import { Box, Image, Center, Divider, SimpleGrid, Link, Flex } from '@chakra-ui/react'
 import Layout from '../components/layout/main'
+import Head from 'next/head'
+import Script from 'next/script'
 
 const Home = ({ imgUrl }) => (
-    <Layout imgUrl={imgUrl}>
-        <SimpleGrid columns={1}>
-            <Box borderRadius='30' height={300} p={10}
-                bgGradient="linear(to-r, #3a548fc7, #182848b2)"
-                css={{ backdropFilter: 'blur(5px)' }}>
-                <Center>
-                    <Image
-                        borderRadius="full"
-                        width={100}
-                        height={100}
-                        src="/images/head1.jpg"
-                    ></Image>
-                </Center>
-                <Box mt={1} textAlign="center" textColor='white' fontSize='3xl'>
-                    Jay
+    <>
+        <Head>
+            <script src="jquery-1.12.4.min.js" />
+            <script src="flipclock.js" />
+        </Head>
+        <Layout imgUrl={imgUrl}>
+            <SimpleGrid columns={1}>
+                <div className='clock'>
+                    <Script src='fc.js' />
+                </div>
+                <Box borderRadius='30' height={300} p={10}
+                    bgGradient="linear(to-r, #3a548fc7, #182848b2)"
+                    css={{ backdropFilter: 'blur(5px)' }}>
+                    <Center>
+                        <Image
+                            borderRadius="full"
+                            width={100}
+                            height={100}
+                            src="/images/head1.jpg"
+                        ></Image>
+                    </Center>
+                    <Box mt={1} textAlign="center" textColor='white' fontSize='3xl'>
+                        Jay
+                    </Box>
+                    <Box textAlign="center" textColor='#888888'>
+                        Mind will stay here for a moment.
+                    </Box>
+                    <Divider orientation="horizontal" />
+                    <SimpleGrid columns={3} spacing={1} mt={5}>
+                        <Center textColor='white'><Link href='/posts' color='blue.100' fontSize='2xl' as='b'>Posts</Link></Center>
+                        <Center><Divider orientation='vertical'></Divider></Center>
+                        <Center textColor='white'><Link href='/about'>About</Link></Center>
+                    </SimpleGrid>
                 </Box>
-                <Box textAlign="center" textColor='#888888'>
-                    Mind will stay here for a moment.
-                </Box>
-                <Divider orientation="horizontal" />
-                <SimpleGrid columns={3} spacing={1} mt={5}>
-                    <Center textColor='white'><Link href='/posts'>Posts</Link></Center>
-                    <Center><Divider orientation='vertical'></Divider></Center>
-                    <Center textColor='white'><Link href='/about'>About</Link></Center>
-                </SimpleGrid>
-            </Box>
-            <Flex>
-                <iframe frameBorder="no" marginWidth={0} marginHeight={0} width={330} height={110}
-                    src="//music.163.com/outchain/player?type=0&id=8690599436&auto=1&height=90"></iframe>
-            </Flex>
-        </SimpleGrid>
-    </Layout >
+                <Flex>
+                    <iframe frameBorder="no" marginWidth={0} marginHeight={0} width={480} height={110}
+                        src="//music.163.com/outchain/player?type=0&id=8690599436&auto=1&height=90"></iframe>
+                </Flex>
+            </SimpleGrid>
+        </Layout >
+    </>
 )
 
 export async function getServerSideProps() {
