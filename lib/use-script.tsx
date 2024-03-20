@@ -23,6 +23,8 @@ const useScript = (params) => {
         script.setAttribute("theme", theme);
         script.setAttribute("issue-term", issueTerm);
         script.setAttribute("repo", repo);
+        script.setAttribute("async", "true")
+        script.setAttribute("crossOrigin", "anonymous")
 
         // Add script to document body
         ref.current.appendChild(script);
