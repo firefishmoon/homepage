@@ -19,13 +19,13 @@ const useScript = (params) => {
         let script = document.createElement("script");
         script.src = url;
         script.async = true;
-        script.crossOrigin = "anonymous";
+        script.crossorigin = "anonymous";
         script.setAttribute("src", url)
         script.setAttribute("theme", theme);
         script.setAttribute("issue-term", issueTerm);
         script.setAttribute("repo", repo);
         script.setAttribute("async", "true")
-        script.setAttribute("crossOrigin", "anonymous")
+        script.setAttribute("crossorigin", "anonymous")
 
         // Add script to document body
         ref.current.appendChild(script);
