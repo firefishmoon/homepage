@@ -8,6 +8,7 @@ import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import Comments from "../../components/comments"
 
 const markdownTheme = {
     p: props => {
@@ -107,6 +108,7 @@ export default function Post({ postData }) {
                 <br />
                 {postData.date}
                 <br />
+                <Comments></Comments>
                 <Footer></Footer>
             </Container>
         </Layout>

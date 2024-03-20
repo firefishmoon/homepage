@@ -33,7 +33,7 @@ const Home = ({ imgUrl }) => (
                     </Box>
                     <Divider orientation="horizontal" />
                     <SimpleGrid columns={3} spacing={1} mt={5}>
-                        <Center textColor='white'><Link href='/posts' color='blue.100' fontSize='2xl' as='b'>Posts</Link></Center>
+                        <Center textColor='white'><Link href='/posts' color='blue.100' fontSize='2xl'>Posts</Link></Center>
                         <Center><Divider orientation='vertical'></Divider></Center>
                         <Center textColor='white'><Link href='/about'>About</Link></Center>
                     </SimpleGrid>
