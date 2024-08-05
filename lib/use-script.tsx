@@ -19,7 +19,7 @@ const useScript = (params) => {
         let script = document.createElement("script");
         script.src = url;
         script.async = true;
-        script.crossorigin = "anonymous";
+        script.crossOrigin = "anonymous";
         script.setAttribute("src", url)
         script.setAttribute("theme", theme);
         script.setAttribute("issue-term", issueTerm);
