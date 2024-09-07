@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react"
+import 'lxgw-wenkai-webfont/style.css'
 
 const theme = extendTheme({
     styles: {
@@ -6,7 +7,6 @@ const theme = extendTheme({
             body: {
                 bg: '#000',
                 textColor: '#D4D4D4',
-
                 // display: flex,
                 // justifyContent: center,
                 // alignItems: center,
@@ -15,5 +15,9 @@ const theme = extendTheme({
             }
         }
     },
+    fonts: {
+        heading: `'LXGW WenKai', sans-serif`,
+        body: `'LXGW WenKai', sans-serif`
+    }
 })
 export default theme
