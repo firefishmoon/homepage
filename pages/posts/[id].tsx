@@ -108,6 +108,8 @@ export default function Post({ postData }) {
                 <br />
                 {postData.date}
                 <br />
+                <br />
+                <Divider />
                 <Comments></Comments>
                 <Footer></Footer>
             </Container>
